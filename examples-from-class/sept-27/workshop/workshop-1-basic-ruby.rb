@@ -9,7 +9,7 @@ def mad_max(numbas)
 	max = 0
 
 	numbas.each do |numba|
-		if numba > max
+	 if numba > max
 			max = numba
 		end
 	end
