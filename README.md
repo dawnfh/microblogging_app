@@ -10,4 +10,3 @@ https://www.ruby-lang.org/en/documentation/
 ## JS Resources
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
->>>>>>> 0bcdee09a1b1723739346bb08c2f885a253281b0
