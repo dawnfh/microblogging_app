@@ -2,6 +2,9 @@
 
 The purpose of this repository is to store relevant information regarding the WDI class.
 
+## Sinatra Resources
+
+http://www.sinatrarb.com/
 
 ## Ruby Resources
 
