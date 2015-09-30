@@ -5,6 +5,8 @@ The purpose of this repository is to store relevant information regarding the WD
 
 ## Ruby Resources
 
+http://ruby-doc.org/
+
 https://www.ruby-lang.org/en/documentation/
 
 ## JS Resources
