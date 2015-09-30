@@ -6,9 +6,21 @@ The purpose of this repository is to store relevant information regarding the WD
 
 http://nycda.com/blog/how-to-code-in-ruby-on-a-windows-machine/
 
+## RubyGems Resources
+
+https://rubygems.org/
+
 ## Sinatra Resources
 
 http://www.sinatrarb.com/
+
+## Mandrill
+
+http://mandrill.com/
+
+## .profile, .bash_profile, .bashrc, etc
+
+http://stefaanlippens.net/bashrc_and_others
 
 ## Ruby Resources
 
