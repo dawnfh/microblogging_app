@@ -1,0 +1,20 @@
+# this indicates where to search for gems
+source "http://rubygems.org"
+
+# here we are specifying to use ruby version 2.2.3
+ruby "2.2.3"
+
+# the following are gems we want to install
+gem "sinatra"
+gem "haml"
+gem "activerecord"
+
+# when you run bundle install it will look into this file to find
+#   which gems it needs to install
+
+# furthermore when you run bundle install, it should create a Gemfile.lock
+#   file that indicates which specific versions of each gem to install
+
+# when we collaborate with other developers we want to ALL be running the
+#  the same versions that way we know that everyone's system/computer
+#  is running within the same environment
