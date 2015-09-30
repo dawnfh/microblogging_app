@@ -9,6 +9,10 @@ http://ruby-doc.org/
 
 https://www.ruby-lang.org/en/documentation/
 
+https://www.codecademy.com/en/tracks/ruby
+
 ## JS Resources
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+https://www.codecademy.com/en/tracks/javascript
