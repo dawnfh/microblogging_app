@@ -1,3 +1,4 @@
+# definition phase of the Pickles class
 class Pickles
   def initialize
     @dill = "salty"
@@ -5,5 +6,6 @@ class Pickles
   end
 end
 
+# instantiation/create phase of Pickles objects
 puts Pickles.new
 puts Pickles.new
