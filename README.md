@@ -2,9 +2,15 @@
 
 The purpose of this repository is to store relevant information regarding the WDI class.
 
-## Using Ruby on Windows
+## Windows 
+
+#### Using Ruby
 
 http://nycda.com/blog/how-to-code-in-ruby-on-a-windows-machine/
+
+#### Setting Environment Variables
+
+http://stackoverflow.com/a/26947514
 
 ## RubyGems Resources
 
