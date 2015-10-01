@@ -4,5 +4,5 @@ require "sinatra"
 # tell sinatra to display Hello World
 #   when you visit http://localhost:4567 url in the browser
 get "/" do
-  "Hello World"
+  "I watch Breaking Bad"
 end

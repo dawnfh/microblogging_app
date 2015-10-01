@@ -6,7 +6,7 @@ get "/eminem" do
 end
 
 # this creates a page with the url of http:localhost:4567/patrisha
-get "/patrisha" do
+get "/Patrisha" do
   "I am Patrisha and I am married to Orlando :)"
 end
 
