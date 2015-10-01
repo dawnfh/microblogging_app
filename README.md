@@ -2,6 +2,10 @@
 
 The purpose of this repository is to store relevant information regarding the WDI class.
 
+## Using Ruby on Windows
+
+http://nycda.com/blog/how-to-code-in-ruby-on-a-windows-machine/
+
 ## Sinatra Resources
 
 http://www.sinatrarb.com/
