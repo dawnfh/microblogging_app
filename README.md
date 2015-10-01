@@ -12,11 +12,15 @@ http://nycda.com/blog/how-to-code-in-ruby-on-a-windows-machine/
 
 http://stackoverflow.com/a/26947514
 
-## RubyGems Resources
+## RubyGems
 
 https://rubygems.org/
 
-## Sinatra Resources
+## Bundler
+
+http://bundler.io/
+
+## Sinatra
 
 http://www.sinatrarb.com/
 
@@ -28,7 +32,7 @@ http://mandrill.com/
 
 http://stefaanlippens.net/bashrc_and_others
 
-## Ruby Resources
+## Ruby
 
 #### Websites
 
@@ -48,7 +52,7 @@ http://www.amazon.com/Well-Grounded-Rubyist-David-Black/dp/1617291692/ref=sr_1_1
 
 http://www.amazon.com/Practical-Object-Oriented-Design-Ruby-Addison-Wesley/dp/0321721330/ref=sr_1_1?ie=UTF8&qid=1443537316&sr=8-1&keywords=practical+object+oriented
 
-## JS Resources
+## JS
 
 #### Websites
 
