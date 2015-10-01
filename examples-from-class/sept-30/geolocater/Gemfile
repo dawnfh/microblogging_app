@@ -5,9 +5,7 @@ source "http://rubygems.org"
 ruby "2.2.3"
 
 # the following are gems we want to install
-gem "sinatra"
-gem "haml"
-gem "activerecord"
+gem "geolocater"
 
 # when you run bundle install it will look into this file to find
 #   which gems it needs to install
