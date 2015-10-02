@@ -2,6 +2,20 @@
 
 The purpose of this repository is to store relevant information regarding the WDI class.
 
+## Git
+
+#### Official Documentation
+
+https://git-scm.com/
+
+#### Simple Guide
+
+http://rogerdudler.github.io/git-guide/
+
+#### Github Guides
+
+https://guides.github.com/
+
 ## Windows 
 
 #### Using Ruby
