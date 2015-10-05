@@ -2,6 +2,12 @@
 
 The purpose of this repository is to store relevant information regarding the WDI class.
 
+## SQL
+
+https://www.codecademy.com/courses/learn-sql
+
+http://www.w3schools.com/sql/default.asp
+
 ## Git
 
 #### Official Documentation
