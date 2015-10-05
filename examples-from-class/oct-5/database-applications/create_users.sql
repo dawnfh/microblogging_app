@@ -1,3 +1,4 @@
+-- command to add new table
 CREATE TABLE users (
   id serial PRIMARY KEY,
   fname varchar(50),
