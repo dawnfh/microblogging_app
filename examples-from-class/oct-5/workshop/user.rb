@@ -6,6 +6,7 @@ class User
   # takes one attribute id and returns
   def self.find(id)
     # (class method) use -c flag for running commands directly into postgres
+    query "SELECT * FROM users WHERE id = #{id}"
   end
 
   # takes in a hash and converts that to where clause
@@ -40,5 +41,11 @@ class User
 
   def destroy
     # (instance method) destroys a particular record.
+  end
+
+  private
+
+  def self.query(query)
+    `psql -d orlandocaraballo -c "#{query}"`
   end
 end
