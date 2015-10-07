@@ -1,0 +1,39 @@
+body {
+  font-family: sans-serif;
+}
+
+label, input {
+  margin: 10px;
+  display: block;
+}
+
+input[type=text], input[type=password] {
+  padding: 5px;
+  width: 300px;
+  border-radius: 2px;
+  border: 1px solid gray;
+  height: 30px;
+}
+
+input[type=submit] {
+  border: none;
+  border-radius: 2px;
+  background: red;
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.flash-notice {
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.flash-alert {
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
