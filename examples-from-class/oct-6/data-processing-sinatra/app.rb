@@ -7,7 +7,7 @@ set :database, "sqlite3:data-processing-sinatra.sqlite3"
 enable :sessions
 
 get "/" do
-  if session[:user_i]
+  if session[:user_id]
     @user = User.find(session[:user_id])
   end
 
