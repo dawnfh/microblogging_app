@@ -2,8 +2,10 @@ require "sinatra"
 require "sinatra/activerecord"
 require "./models"
 
-set :database, "sqlite3:how-to-follow.sqlite3"
+configure :development do
+  set :database, "sqlite3:how-to-follow.sqlite3"
+end
 
 get "/" do
-  "print some bullshit"
+  "display some stuff"
 end
