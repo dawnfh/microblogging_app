@@ -1,0 +1,2 @@
+require "sinatra/activerecord/rake"
+require "./how_to_follow"
