@@ -13,18 +13,21 @@ get "/login" do
 	erb :login   
 end
 
-# require 'sinatra'
+post '/sign-in' do     
+	puts "my params are" + params.inspect   
+end
+
 
 #   get '/' do    
 #    erb :home, :layout => false
 #   end
 
-#   get '/services' do    
-#    erb :services
+#   get '/blog' do    
+#    erb :blog
 #   end
 
-#  get '/about' do    
-#    erb :about
+#  get '/profilesetup' do    
+#    erb :profilesetup
 #   end
 
 #  get '/gallery' do    
