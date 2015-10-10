@@ -1,0 +1,14 @@
+<h1>Sign Up Form</h1>
+<!--
+  this is the signnup form 
+  pay special attention to the method and action attributes
+  method="POST" and action="/signup" means it will go to the
+  post "/signup" route defined in the app.rb file
+ -->
+<form method="POST" action="/signup">
+  <label for="email">Choose your login email</label>
+  <input type="text" name="email">
+  <label for="password">Choose your password</label>
+  <input type="password" name="password">
+  <input type="submit" value="Create Account">
+</form>

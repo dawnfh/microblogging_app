@@ -1,0 +1,26 @@
+body {
+  font-family: verdana, sans-serif;
+}
+
+a {
+  display: block;
+}
+
+input, label {
+  display: block;
+  margin: 5px 0;
+}
+
+.flash {
+  border-radius: 4px;
+  color: white;
+  padding: 10px;
+}
+
+.flash-info {
+  background: green;
+}
+
+.flash-alert {
+  background: red;
+}

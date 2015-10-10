@@ -1,0 +1,14 @@
+<h1>Login Form</h1>
+<!--
+  this is the login form 
+  pay special attention to the method and action attributes
+  method="POST" and action="/login" means it will go to the
+  post "/login" route defined in the app.rb file
+ -->
+<form method="POST" action="/login">
+  <label for="email">Email</label>
+  <input type="text" name="email">
+  <label for="password">Password</label>
+  <input type="password" name="password">
+  <input type="submit" value="Login">
+</form>
