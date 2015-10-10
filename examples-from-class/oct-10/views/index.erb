@@ -1,3 +1,4 @@
+<h1>Login Info</h1>
 <!--
   here we check to see if the user is logged in
   we use the current_user method defined in app.erb
@@ -6,19 +7,10 @@
   <!-- if the user is logged in do this -->
   Here is your user information:
   <ul>
-    <li><%= current_user.email %></li>
-    <li><%= current_user.password %></li>
+    <li><strong>Email:</strong> <%= current_user.email %></li>
+    <li><strong>Password:</strong> <%= current_user.password %></li>
   <ul>
-
-  <!-- 
-    this links us to the get "/logout" route defined
-    in the app.rb file, notice we only do this when the
-    user is logged in
-  -->
-  <a href="/logout">Logout</a>
 <% else %>
   <!-- if the user is not logged in do this -->
-  You must login or signup before seeing your user info:
-  <a href="/login">Login</a>
-  <a href="/signup">Sign Up</a>
+  You must login or signup before accessing this site
 <% end %>

@@ -2,11 +2,29 @@ body {
   font-family: verdana, sans-serif;
 }
 
-a {
-  display: block;
+nav {
+  margin: 10 0 20px;
 }
 
-input, label {
+nav a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+h2 {
+  border-bottom: 1px solid black;
+}
+
+a {
+  /*display: block;*/
+}
+
+strong {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+input, label, textarea {
   display: block;
   margin: 5px 0;
 }

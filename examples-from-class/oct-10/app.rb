@@ -40,7 +40,7 @@ post "/login" do
     #   logged in
     flash[:info] = "You are now logged in"
 
-    # this redirects to the index (/) route because
+    # this redirects to the get "/" route because
     #   the password is correct
     redirect "/"
   else
@@ -49,7 +49,7 @@ post "/login" do
     #   using a flash message
     flash[:alert] = "Your password is incorrect"
 
-    # this redirects to the login route because the
+    # this redirects to the get "/login" route because the
     #   password is incorrect
     redirect "/login"
   end
@@ -76,7 +76,7 @@ post "/signup" do
   #   logged in content
   session[:user_id] = @user.id
 
-  # this redirects to the index (/) route
+  # this redirects to the get "/" route
   redirect "/"
 end
 
@@ -95,8 +95,64 @@ get "/logout" do
   #   logged out
   flash[:info] = "You are now logged out"
 
-  # this redirects to the index (/) route
+  # this redirects to the get "/" route
   redirect "/"
+end
+
+# HTTP GET method and "/posts/new" action route
+get "/posts/new" do
+  # this will output whatever is within the new_post.erb template
+  erb :new_post
+end
+
+# HTTP GET method and "/posts" action route
+get "/posts" do
+  # this loads all the created posts from the database
+  #   and stores it within the @posts instance variable
+  #   ONLY OF THE LOGGED IN USER
+  @posts = Post.where(user_id: session[:user_id])
+
+  # this will output whatever is within the posts.erb template
+  erb :posts
+end
+
+# HTTP GET method and "/posts" action route
+get "/posts/all" do
+  # this loads all the created posts from the database
+  #   and stores it within the @posts instance variable
+  @posts = Post.all
+
+  # this will output whatever is within the posts.erb template
+  erb :posts
+end
+
+# HTTP GET method and "/users/:user_id/posts" action route
+get "/users/:user_id/posts" do
+  # this loads all the created posts from the database
+  #   and stores it within the @posts instance variable
+  #   ONLY OF THE SPECIFIC USER WITH THE user_id set in the browser
+  #   so entering "localhost:4567/users/5/posts" would display
+  #   the posts of the user with an id of 5
+  @posts = Post.where(user_id: params[:user_id])
+
+  # this will output whatever is within the posts.erb template
+  # notice how this also goes to the posts.erb template
+  #   think DRY (Don't Repeat Yourself)
+  erb :posts
+end
+
+# HTTP POST method and "/posts" action route
+post "/posts" do
+  # here we are creating a post with the body of what was
+  #   set in the form body input field and user_id of
+  #   whatever the logged in user is
+  # this creates an association between the new post and
+  #   the logged in user
+  Post.create(body: params[:body], user_id: session[:user_id])
+
+  # this redirects to the get "/posts" route so someone
+  #   can see all their posts
+  redirect "/posts/all"
 end
 
 # this method is available in every template
