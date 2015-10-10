@@ -15,10 +15,6 @@ h2 {
   border-bottom: 1px solid black;
 }
 
-a {
-  /*display: block;*/
-}
-
 strong {
   display: inline-block;
   margin-right: 10px;
@@ -27,6 +23,15 @@ strong {
 input, label, textarea {
   display: block;
   margin: 5px 0;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+li {
+  list-style: none;
+  padding-left: 10px;
 }
 
 .flash {

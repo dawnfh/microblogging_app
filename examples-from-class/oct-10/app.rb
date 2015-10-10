@@ -116,13 +116,27 @@ get "/posts" do
   erb :posts
 end
 
-# HTTP GET method and "/posts" action route
+# HTTP GET method and "/posts/followers" action route
+get "/posts/followers" do
+  # this loads all the created posts from the database
+  #   and stores it within the @posts instance variable
+  @posts = Post.all
+
+  # this will output whatever is within the posts.erb template
+  # notice how this also goes to the posts.erb template
+  #   think DRY (Don't Repeat Yourself)
+  erb :posts
+end
+
+# HTTP GET method and "/posts/all" action route
 get "/posts/all" do
   # this loads all the created posts from the database
   #   and stores it within the @posts instance variable
   @posts = Post.all
 
   # this will output whatever is within the posts.erb template
+  # notice how this also goes to the posts.erb template
+  #   think DRY (Don't Repeat Yourself)
   erb :posts
 end
 
@@ -153,6 +167,60 @@ post "/posts" do
   # this redirects to the get "/posts" route so someone
   #   can see all their posts
   redirect "/posts/all"
+end
+
+# HTTP GET method and "/users/all" action route
+get "/users/all" do
+  # this loads all the created posts from the database
+  #   and stores it within the @posts instance variable
+  @users = User.all
+
+  # this will output whatever is within the users.erb template
+  erb :users  
+end
+
+# HTTP GET method and "/followees" action route
+get "/followees" do
+  # here we are grabbing all the users that the logged in user is following
+  @users = current_user.followees
+
+  # this will output whatever is within the users.erb template
+  # notice how this also goes to the posts.erb template
+  #   think DRY (Don't Repeat Yourself)
+  erb :users
+end
+
+# HTTP GET method and "/followers" action route
+get "/followers" do
+  # here we are grabbing all the users that are following the logged in user 
+  @users = current_user.followers
+
+  # this will output whatever is within the users.erb template
+  # notice how this also goes to the posts.erb template
+  #   think DRY (Don't Repeat Yourself)
+  erb :users
+end
+
+# HTTP GET method and "/users/:user_id/follow" action route
+get "/users/:followee_id/follow" do
+  # here we are creating an association between the current user
+  #   who is doing the following and the user you are tryng to follow
+  Follow.create(follower_id: session[:user_id], followee_id: params[:followee_id])
+
+  # this redirects to the get "/users/all" route
+  redirect "/users/all"
+end
+
+# HTTP GET method and "/users/:user_id/unfollow" action route
+get "/users/:followee_id/unfollow" do
+  # here we are finding the association where where the follower is
+  #   is the logged in user and the followee is the user with
+  #   a user_id equal to params[:followee_id]
+  @follow = Follow.where(follower_id: session[:user_id], followee_id: params[:followee_id]).first
+  @follow.destroy
+
+  # this redirects to the get "/users/all" route
+  redirect "/users/all"
 end
 
 # this method is available in every template
