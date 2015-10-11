@@ -118,9 +118,20 @@ end
 
 # HTTP GET method and "/posts/followers" action route
 get "/posts/followers" do
-  # this loads all the created posts from the database
-  #   and stores it within the @posts instance variable
-  @posts = Post.all
+  # this loads all the created posts from the logged in user's
+  #   followers
+  # this block here puts all the posts into an array
+  @posts = current_user.followers.inject([]) do |posts, follower|
+    # this takes the current follower's posts and add them to the
+    #   posts array we are building
+    posts << follower.posts
+  end
+
+  # at this point the the posts are in the form of an array within an
+  #   an array so we use the ruby array method (flatten) which makes
+  #   it so that it is goes from say [[1,2],[5,6],[1,3]] to [1,2,3,5,6,1,3]
+  #   http://ruby-doc.org/core-2.2.3/Array.html#method-i-flatten
+  @posts.flatten!
 
   # this will output whatever is within the posts.erb template
   # notice how this also goes to the posts.erb template
