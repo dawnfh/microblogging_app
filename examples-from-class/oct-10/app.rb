@@ -209,7 +209,7 @@ get "/followers" do
   # this will output whatever is within the users.erb template
   # notice how this also goes to the posts.erb template
   #   think DRY (Don't Repeat Yourself)
-  erb :users
+  erb :followers
 end
 
 # HTTP GET method and "/users/:user_id/follow" action route
@@ -219,6 +219,10 @@ get "/users/:followee_id/follow" do
   Follow.create(follower_id: session[:user_id], followee_id: params[:followee_id])
 
   # this redirects to the get "/users/all" route
+  # right now its hardcoded to go to this route but it would make
+  #   more sense to have this redirect to the page that called it
+  #   for our purposes now it will do but there is a more useful
+  #   way to do this
   redirect "/users/all"
 end
 
@@ -231,6 +235,10 @@ get "/users/:followee_id/unfollow" do
   @follow.destroy
 
   # this redirects to the get "/users/all" route
+  # right now its hardcoded to go to this route but it would make
+  #   more sense to have this redirect to the page that called it
+  #   for our purposes now it will do but there is a more useful
+  #   way to do this
   redirect "/users/all"
 end
 
