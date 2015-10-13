@@ -9,37 +9,38 @@ set :database, "sqlite3:myspotblog.sqlite3"
 set :sessions, true
 use Rack::Flash, sweep: true
 
-get "/login" do
+get '/login' do
 	erb :login   
 end
 
-post '/sign-in' do     
-	puts "my params are" + params.inspect   
+post '/login' do     
+	puts "my params are" + params.inspect 
+	erb :login  
 end
 
 
-#   get '/' do    
-#    erb :home, :layout => false
-#   end
+  get '/' do    
+   erb :home, :layout => false
+  end
 
-#   get '/blog' do    
-#    erb :blog
-#   end
+  get '/blog' do    
+   erb :blog
+  end
 
-#  get '/profilesetup' do    
-#    erb :profilesetup
-#   end
+ get '/profilesetupform' do    
+   erb :profilesetupform
+  end
 
-#  get '/gallery' do    
-#    erb :gallery
-#   end
+ get '/form' do    
+   erb :form
+  end
 
-#  get '/contact' do    
-#    erb :contact
-#   end
+ get '/contact' do    
+   erb :contact
+  end
 
 
-# require 'sinatra'
+
 
 
 
@@ -55,7 +56,7 @@ end
 # end
 
 
-# post "/contact-us-post" do
+# post "/blog" do
 #   # this invokes the send_email method defined above
 #   send_email(params[:message_body],params[:name_input],params[:email_input])
 # end
