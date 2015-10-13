@@ -14,4 +14,5 @@ group :development do
 end   
 
 group :production do         
-	gem 'pg'   end
+	gem 'pg'   
+end
