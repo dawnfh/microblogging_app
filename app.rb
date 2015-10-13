@@ -39,7 +39,7 @@ end
    erb :contact
   end
 
-set:database, "sqlite3:exercise.sqlite3"
+
 
 get "/"  do  
 	User.create(fname: "Dawn", lname: "Feintuch", birthday: "11/22/89")
