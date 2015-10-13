@@ -5,7 +5,7 @@ require "rack-flash"
 require './models'
 
 enable :sessions
-set :database, "sqlite3:myspotblog.sqlite3"
+configure(:development){set :database, "sqlite3:myspotblog.sqlite3"}
 set :sessions, true
 use Rack::Flash, sweep: true
 
@@ -39,7 +39,16 @@ end
    erb :contact
   end
 
+set:database, "sqlite3:exercise.sqlite3"
 
+get "/"  do  
+	User.create(fname: "Dawn", lname: "Feintuch", birthday: "11/22/89")
+end
+
+get "/user_route" do
+	@user_instance_variable = User.last
+	erb :user_template
+end
 
 
 
@@ -61,4 +70,5 @@ end
 #   send_email(params[:message_body],params[:name_input],params[:email_input])
 # end
 
-
+# post '/login' do
+# 	@user = User.
