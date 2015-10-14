@@ -1,6 +1,32 @@
 
 #background {
 	
-	background-image: url("Papergrunge2.jpg");
-	background-repeat: no repeat;
+	background-image: url("../image/Papergrunge2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+} 
+
+#content {
+    background-color: #FFFFFF;
+    padding: 2px 2px 2px 20px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 4px #000000;
+    -moz-box-shadow: 0 0 4px #000000;
+    box-shadow: 0 0 4px #000000;
+    border-top: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+    behavior:   url(/PIE/PIE.htc);
 }
+#wrapper input {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: bold;
+    border: none #FFFFFF;
+}
+

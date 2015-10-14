@@ -9,31 +9,45 @@ configure(:development){set :database, "sqlite3:myspotblog.sqlite3"}
 set :sessions, true
 use Rack::Flash, sweep: true
 
-get '/login' do
+get '/' do
 	erb :login   
 end
 
-post '/login' do     
-	puts "my params are" + params.inspect 
-	erb :login  
+#Need to implement session for logging in
+
+
+post '/log-in' do   
+	  puts "my params are" + params.inspect
+	  if  @user && @user.password == params[:password]
+	  	session[:user_id] = @user.id
+	  	redirect '/blog'
+	  else
+	  	redirect '/log-in'
+	  end
 end
+	  
+	  
+# 	@user = User.where(username: params[:username]).first
+# 	# puts "my params are" + params.inspect
+# 	if @user.password == params[:password]
+# 		redirect '/blog'
+# 	else
+# 		redirect :back
+# 	end		
+# end
 
 
-  get '/' do    
-   erb :home, :layout => false
-  end
-
-  get '/blog' do    
-   erb :blog
-  end
+ get '/blog' do    
+   erb :blog, layout: false
+ end
 
  get '/profilesetupform' do    
    erb :profilesetupform
-  end
+ end
 
  get '/form' do    
    erb :form
-  end
+ end
 
  get '/contact' do    
    erb :contact
@@ -41,14 +55,32 @@ end
 
 
 
-get "/"  do  
-	User.create(fname: "Dawn", lname: "Feintuch", birthday: "11/22/89")
+get '/signup' do  
+	# User.create(fname: "Dawn", lname: "Feintuch", username: "dawn2015") # to fix
+	erb :profilesetupform
 end
+
+post '/signup' do
+	#this is where we create the user based on the params from the form
+	@user = User.new(params)
+	if @user.save
+		# need to implement sessions for signing up.
+		redirect "/blog"
+	else
+		redirect "/log-in"
+	end		
+
+end	
 
 get "/user_route" do
 	@user_instance_variable = User.last
 	erb :user_template
 end
+
+get '/post-edit' do
+	erb :post_post
+end
+
 
 
 

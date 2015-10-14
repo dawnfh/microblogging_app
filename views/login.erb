@@ -5,8 +5,9 @@
   <div id="nav_wrapper">
     <ul>
       <li><a href"login">Login</a></li><li>
-      <a href"blog">Blog</a></li></li>
-      <a href"profilesetupform">Account <img scr="arrow.png"/></a></li><li>
+      <a href"profiles">My Profiles</a></li><li>
+      <a href"bloghome">Blog</a></li></li>
+      <a href"profilesetupform">My Account<img scr="arrow.png"/></a></li>
       <ul>
           <li><a href="#">SubMenu</a></li>
           <li><a href="#">SubMenu</a></li>
@@ -21,16 +22,17 @@
 </head>
 <body> 
 
+  <form action="/log-in" method="post">
   <div class="login-card">
     <h1>Log-in</h1><br>
       <form>
-        <input type="text" name="user" placeholder="Username">
-        <input type="password" name="pass" placeholder="Password">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
         <input type="submit" name="login" class="login login-submit" value="login">
       </form>
   
     
   <div class="login-help">
-    <a href="#">Register</a> • <a href="#">Forgot Password</a>
+    <a href="/profilesetupform">Register</a> • <a href="#">Forgot Password</a>
   </div>
 </div>
